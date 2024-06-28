@@ -2,12 +2,12 @@ import { MongoClient } from 'mongodb';
 
 class DBClient {
   constructor() {
-    this.client = new MongoClient(process.env.DB_HOST, {
+    this.client = new MongoClient(localhost, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
     this.client.connect();
-    this.db = this.client.db(process.env.DB_DATABASE);
+    this.db = this.client.db(files_manager);
   }
 
   async isAlive() {
