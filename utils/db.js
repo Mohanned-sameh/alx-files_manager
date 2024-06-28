@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 
 class DBClient {
   constructor() {
-    this.client = new MongoClient(localhost, {
+    this.client = new MongoClient('127.0.0.1', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
